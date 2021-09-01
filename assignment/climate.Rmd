@@ -20,7 +20,7 @@ library(tidyverse)
 ```{r message=FALSE}
 
 co2 <- 
-read_table("https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_mm_mlo.txt", 
+read_table("co2_mm_mlo.txt", 
                   comment="#",
                   col_names = c("year", "month", "decimal_date", "average",
                                 "interpolated", "trend", "days"),
@@ -36,7 +36,11 @@ ggplot(co2, aes(x = decimal_date, y = average)) + geom_line()
 
 Which months are the CO2 values at the maximum? Minimum?  Why is this?
 
+The month with maximum CO2 is May, and the months with minimum CO2 is September and October. The reason is that the plants will grow in May when they will remove much CO2 from the atmosphere. However, in the fall, the plants cease growing and the CO2 concentrations increase again. 
+
 What rolling average is used in computing the "trend" line?  How does the trend depend on the rolling average?
+
+The yearly rolling average data is used in computing the "trend" line. 
 
 ------------------------
 
@@ -50,20 +54,39 @@ Data from: <http://climate.nasa.gov/vital-signs/global-temperature>
 
 Describe the data set to the best of your ability given the documentation provided.  Describe what kind of column each data contains and what units it is measured in.  Then address our three key questions in understanding this data:
 
+The data set shows the difference between annual average temperature and the 30-year average temperature of 1951-1980 in the period of 1880 to 2020. The data set contains a column of raw temperature difference and a column of temperature difference obtained from smoothing. The unit is celsius degree. 
+
 - How are the measurements made? What is the associated measurement uncertainty?
+
+The measurements are made by subtracting the annual average temperature from the 1951-1980 average temperature. An uncertainty is the accuracy of the measuring instruments as they must have changed in such a long period.
+
 - What is the resolution of the data?
+
+Each data point keeps two decimal places.
+
 - Are their missing values? How should they be handled?
 
+There is no missing value. If there is, it can be handled by assigning it the average value of the five data points surrounding it.
 
 ## Question 2:
 
 Construct the necessary R code to import and prepare for manipulation the following data set: <http://climate.nasa.gov/system/internal_resources/details/original/647_Global_Temperature_Data_File.txt>
 
+```{r}
+gt <- read_table("647_Global_Temperature_Data_File.txt", 
+                  comment="#",
+                 col_names = c("year","NoSmoothing","Lowess"),
+                  na = c("-1", "-99.99"))
+gt
+```
 
 ## Question 3:
 
 Plot the trend in global mean temperatures over time.  Describe what you see in the plot and how you interpret the patterns you observe.
 
+```{r}
+ggplot(gt, aes(x =year, y =Lowess)) + geom_line() 
+```
 
 ## Question 4: Evaluating the evidence for a "Pause" in warming?
 

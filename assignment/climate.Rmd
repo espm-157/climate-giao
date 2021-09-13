@@ -85,7 +85,8 @@ gt
 Plot the trend in global mean temperatures over time.  Describe what you see in the plot and how you interpret the patterns you observe.
 
 ```{r}
-ggplot(gt, aes(x =year, y =Lowess)) + geom_line() 
+ggplot(co2, aes(x =decimal_date, y =trend)) + geom_line() 
+#The trend line is smoother than the average temperature line. Since each data entry of the temporal column (trend) is closer to each other than the column of month, the plotted line will then be smoother with less fluctuations. 
 ```
 
 ## Question 4: Evaluating the evidence for a "Pause" in warming?
@@ -93,6 +94,8 @@ ggplot(gt, aes(x =year, y =Lowess)) + geom_line()
 The [2013 IPCC Report](https://www.ipcc.ch/pdf/assessment-report/ar5/wg1/WG1AR5_SummaryVolume_FINAL.pdf) included a tentative observation of a "much smaller increasing trend" in global mean temperatures since 1998 than was observed previously.  This led to much discussion in the media about the existence of a "Pause" or "Hiatus" in global warming rates, as well as much research looking into where the extra heat could have gone.  (Examples discussing this question include articles in [The Guardian](http://www.theguardian.com/environment/2015/jun/04/global-warming-hasnt-paused-study-finds), [BBC News](http://www.bbc.com/news/science-environment-28870988), and [Wikipedia](https://en.wikipedia.org/wiki/Global_warming_hiatus)). 
 
 By examining the data here, what evidence do you find or not find for such a pause?  Present an analysis of this data (using the tools & methods we have covered in Foundation course so far) to argue your case.  
+
+One of the evidence is that due to the increasing amount of aerosols in the air, there will be more wave energy reflected back to the universe. Thus, there will be a "Pause" in global warming. Other evidences include the periodic upwelling of cooler currents in the Pacific. 
 
 What additional analyses or data sources would better help you refine your arguments?
 

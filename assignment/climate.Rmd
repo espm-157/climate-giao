@@ -86,14 +86,8 @@ Plot the trend in global mean temperatures over time.  Describe what you see in 
 
 ```{r}
 ggplot(co2, aes(x =decimal_date, y =trend)) + geom_line() 
-<<<<<<< HEAD
 ```
 The trend line is smoother than the average temperature line. Since each data entry of the temporal column (trend) is closer to each other than the column of month, the plotted line will then be smoother with less fluctuations. 
-=======
- 
-
-The trend line is smoother than the average temperature line. Since each data entry of the temporal column (trend) is closer to each other than the column of month, the plotted line will then be smoother with less fluctuations.
->>>>>>> 91815432a651b13f7bf803c927c5396e10ffd83d
 
 ## Question 4: Evaluating the evidence for a "Pause" in warming?
 
@@ -101,22 +95,21 @@ The [2013 IPCC Report](https://www.ipcc.ch/pdf/assessment-report/ar5/wg1/WG1AR5_
 
 By examining the data here, what evidence do you find or not find for such a pause?  Present an analysis of this data (using the tools & methods we have covered in Foundation course so far) to argue your case.  
 
-One of the evidence is that due to the increasing amount of aerosols in the air, there will be more wave energy reflected back to the universe. Thus, there will be a "Pause" in global warming. Other evidences include the periodic upwelling of cooler currents in the Pacific. 
+One of the evidence is that due to the increasing amount of aerosols in the air, there will be more wave energy reflected back to the universe. Thus, it looks like that there is a "Pause" in global warming. Other proposed evidences include the periodic upwelling of cooler currents in Pacific to absorb heat and the sinking of current in Atlantic to bury remarkable amount of heat into bottom of the sea. However, the new study suggests that the warming rate in the recent 15 years prior to 2014 have just been the same as before. Previous study got the apparent "Pause" result just because it did not account for the change in temperature measuring method across the measuring period.
 
 What additional analyses or data sources would better help you refine your arguments?
 
-We need to have more comprehensive data
+Learning about the specific methods of natural systems heat flow modeling and global temperature measurement by the previous studies can provide better insight on the accuracy of the results. Temperature change distribution among different regions around the globe may also be useful. 
 
 ## Question 5: Rolling averages
     
 - What is the meaning of "5 year average" vs "annual average"?
-
-5 year average is calculated from data in every 5 years.
-
-- Construct 5 year averages from the annual data.  Construct 10 & 20-year averages. 
+- Construct 5 year averages from the annual data.  Construct 10 & 20-year averages.
 - Plot the different averages and describe what differences you see and why.  
 
-The meaning of "5 year average" is the mean value from a range of five years. However, the annual average is the mean value from just one year. 
+The meaning of "5 year average" is the mean value from a range of five years. However, the annual average is the mean value from just one year.
+
+
 
 
 

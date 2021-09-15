@@ -16,11 +16,6 @@ output: github_document
 ```{r message=FALSE}
 library(tidyverse)
 library(dplyr)
-<<<<<<< HEAD
-library(Rcpp)
-=======
-install.packages(RcppRoll)
->>>>>>> a547ef4f12525f5dc8d24257bd38ba37e0f772a9
 ```
 
 ```{r message=FALSE}

@@ -15,6 +15,8 @@ output: github_document
 
 ```{r message=FALSE}
 library(tidyverse)
+library(dplyr)
+library(Rcpp)
 ```
 
 ```{r message=FALSE}
@@ -86,7 +88,6 @@ Plot the trend in global mean temperatures over time.  Describe what you see in 
 
 ```{r}
 ggplot(co2, aes(x =decimal_date, y =trend)) + geom_line() 
-<<<<<<< HEAD
 ```
 The trend line is smoother than the average temperature line. Since each data entry of the temporal column (trend) is closer to each other than the column of month, the plotted line will then be smoother with less fluctuations. 
 =======
@@ -110,11 +111,9 @@ We need to have more comprehensive data
 ## Question 5: Rolling averages
     
 - What is the meaning of "5 year average" vs "annual average"?
-- Construct 5 year averages from the annual data.  Construct 10 & 20-year averages. 
 - Plot the different averages and describe what differences you see and why.  
 
-The meaning of "5 year average" is the mean value from a range of five years. However, the annual average is the mean value from just one year. 
-
+The meaning of "5 year average" is the mean value from a range of five years. However, the annual average is the mean value from just one year. According to the plot from the websites, the 5 year average and 10 year average graphs will be smoother. Due to the climate changes and the global greenhouse effects, we can see the global temperatures are in a constantly increasing trend. This trend will bring many further negative impacts on our environment, and we need to solve these issues.
 
 
 # Exercise II: Melting Ice Sheets?
@@ -125,7 +124,7 @@ The meaning of "5 year average" is the mean value from a range of five years. Ho
 ## Question 1:
 
 - Describe the data set: what are the columns and units? Where do the numbers come from? 
-- What is the uncertainty in measurment? Resolution of the data? Interpretation of missing values?
+- What is the uncertainty in measurement? Resolution of the data? Interpretation of missing values?
 
 
 ## Question 2:
@@ -148,7 +147,7 @@ Plot the data and describe the trends you observe.
 
 - Describe the data set: what are the columns and units? 
 - Where do these data come from? 
-- What is the uncertainty in measurment? Resolution of the data? Interpretation of missing values?
+- What is the uncertainty in measurement? Resolution of the data? Interpretation of missing values?
 
 
 ## Question 2:

@@ -15,6 +15,8 @@ output: github_document
 
 ```{r message=FALSE}
 library(tidyverse)
+library(dplyr)
+install.packages(RcppRoll)
 ```
 
 ```{r message=FALSE}
@@ -87,7 +89,7 @@ Plot the trend in global mean temperatures over time.  Describe what you see in 
 ```{r}
 ggplot(co2, aes(x =decimal_date, y =trend)) + geom_line() 
 ```
-The trend line is smoother than the average temperature line. Since each data entry of the temporal column (trend) is closer to each other than the column of month, the plotted line will then be smoother with less fluctuations. 
+The trend line is smoother than the average temperature line. Since each data entry of the temporal column (trend) is closer to each other than the column of month, the plotted line will then be smoother with less fluctuations. The line is to demonstrate an overall rising pattern of global temperature regardless of the fluctuations in each year.
 
 ## Question 4: Evaluating the evidence for a "Pause" in warming?
 
@@ -106,9 +108,6 @@ Learning about the specific methods of natural systems heat flow modeling and gl
 - What is the meaning of "5 year average" vs "annual average"?
 - Construct 5 year averages from the annual data.  Construct 10 & 20-year averages.
 - Plot the different averages and describe what differences you see and why.  
-
-The meaning of "5 year average" is the mean value from a range of five years. However, the annual average is the mean value from just one year.
-
 
 
 

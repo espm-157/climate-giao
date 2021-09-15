@@ -66,7 +66,7 @@ Each data point keeps two decimal places.
 
 - Are their missing values? How should they be handled?
 
-There is no missing value. If there is, it can be handled by assigning it the average value of the five data points surrounding it.
+There is no missing value. If there is, it can be handled by assigning it the average value of the five or ten data points surrounding it.
 
 ## Question 2:
 
@@ -86,8 +86,9 @@ Plot the trend in global mean temperatures over time.  Describe what you see in 
 
 ```{r}
 ggplot(co2, aes(x =decimal_date, y =trend)) + geom_line() 
-#The trend line is smoother than the average temperature line. Since each data entry of the temporal column (trend) is closer to each other than the column of month, the plotted line will then be smoother with less fluctuations. 
+ 
 ```
+The trend line is smoother than the average temperature line. Since each data entry of the temporal column (trend) is closer to each other than the column of month, the plotted line will then be smoother with less fluctuations.
 
 ## Question 4: Evaluating the evidence for a "Pause" in warming?
 

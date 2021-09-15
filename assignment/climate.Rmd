@@ -105,6 +105,9 @@ We need to have more comprehensive data
 ## Question 5: Rolling averages
     
 - What is the meaning of "5 year average" vs "annual average"?
+
+5 year average is calculated from data in every 5 years.
+
 - Construct 5 year averages from the annual data.  Construct 10 & 20-year averages. 
 - Plot the different averages and describe what differences you see and why.  
 

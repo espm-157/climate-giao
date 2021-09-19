@@ -206,7 +206,7 @@ Vostok Core, back to 400,000 yrs before present day
 - Description of data set: <http://cdiac.esd.ornl.gov/trends/co2/vostok.html>
 - Data source: <http://cdiac.ornl.gov/ftp/trends/co2/vostok.icecore.co2>
 
-## Questions / Tasks:
+## Questions / Tasks: 
 
 - Describe the data set: what are the columns and units? Where do the numbers come from? 
 - What is the uncertainty in measurment? Resolution of the data? Interpretation of missing values?

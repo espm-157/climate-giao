@@ -16,11 +16,6 @@ output: github_document
 ```{r message=FALSE}
 library(tidyverse)
 library(dplyr)
-<<<<<<< HEAD
-library(Rcpp)
-=======
-install.packages(RcppRoll)
->>>>>>> a547ef4f12525f5dc8d24257bd38ba37e0f772a9
 ```
 
 ```{r message=FALSE}
@@ -110,16 +105,11 @@ Learning about the specific methods of natural systems heat flow modeling and gl
 ## Question 5: Rolling averages
     
 - What is the meaning of "5 year average" vs "annual average"?
-<<<<<<< HEAD
 - Plot the different averages and describe what differences you see and why.  
-
-The meaning of "5 year average" is the mean value from a range of five years. However, the annual average is the mean value from just one year. According to the plot from the websites, the 5 year average and 10 year average graphs will be smoother. Due to the climate changes and the global greenhouse effects, we can see the global temperatures are in a constantly increasing trend. This trend will bring many further negative impacts on our environment, and we really need to solve these issues.
-=======
 - Construct 5 year averages from the annual data.  Construct 10 & 20-year averages.
 - Plot the different averages and describe what differences you see and why.  
 
-
->>>>>>> a547ef4f12525f5dc8d24257bd38ba37e0f772a9
+The meaning of "5 year average" is the mean value from a range of five years. However, the annual average is the mean value from just one year. According to the plot from the websites, the 5 year average and 10 year average graphs will be smoother. Due to the climate changes and the global greenhouse effects, we can see the global temperatures are in a constantly increasing trend. This trend will bring many further negative impacts on our environment, and we really need to solve these issues.
 
 
 # Exercise II: Melting Ice Sheets?
@@ -132,16 +122,31 @@ The meaning of "5 year average" is the mean value from a range of five years. Ho
 - Describe the data set: what are the columns and units? Where do the numbers come from? 
 - What is the uncertainty in measurement? Resolution of the data? Interpretation of missing values?
 
+The columns are data for Time (units: year in decimal), Greenland mass (units: Gross Tonnage), and Antarctica mass (units: Gross Tonnage). The uncertainty behind the measurement is that the ice sheet is losing significant amounts of land-based ice in a very quick speed, the accurate and up-to-date measurement of the land mass is hard to get. The resolution of the data is in meters. The missing values should be the data that cannot be directly acquired by satellites. 
+
 
 ## Question 2:
 
 Construct the necessary R code to import this data set as a tidy `Table` object.
 
+```{r}
+icesheet <- read.csv("499_GRN_ANT_mass_changes.csv",
+                     col.names=c("Year","Greenland Mass","Antarctica Mass"))
+
+icesheet
+```
+
 ## Question 3:
 
 Plot the data and describe the trends you observe.
 
+```{r}
 
+ggplot(icesheet, aes(x =Year, y =Greenland.Mass)) + geom_line()
+ggplot(icesheet, aes(x =Year, y =Antarctica.Mass)) + geom_line()
+```
+
+As we can see, the overall trend for both Greenland Mass and Antarctica Mass is downward, and the trend is also winding alone the way. 
 
 # Exercise III: Rising Sea Levels?
 

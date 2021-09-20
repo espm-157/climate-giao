@@ -132,6 +132,7 @@ Construct the necessary R code to import this data set as a tidy `Table` object.
 icesheet <- read.csv("499_GRN_ANT_mass_changes.csv",
                      col.names=c("Year","Greenland Mass","Antarctica Mass"))
 
+icesheet %>% as_tibble()
 icesheet
 ```
 
@@ -201,7 +202,7 @@ The columns are year, month, day, extent, missing values, and source data. The d
 Construct the necessary R code to import this data set as a tidy `Table` object.
 ```{r}
 seaice <- read.csv("seaice.csv")
-seaice
+seaice %>% as_tibble()
 seaice_agg <- aggregate(seaice[, 4], list(seaice$Year), mean)
 seaice_agg
 ```
@@ -252,7 +253,7 @@ rev_icecore
 ```
 
 ```{r}
-icecoreco2 <- ggplot(icecoret, aes(x =MeanAgeoftheAir, y =co2concentrations)) + geom_line()
+icecoreco2 <- ggplot(rev_icecore, aes(x =MeanAgeoftheAir, y =co2concentrations)) + geom_line()
 icecoreco2
 ```
 ```{r}
